@@ -4,9 +4,14 @@
 pip3 install requests beautifulsoup4 pyyaml
 ```
 
-Current usage:
-- Replace `url` in [scraper.py](./scraper.py) with a link in the format:
+Usage:
+
+```
+python3 scraper.py --url <url> --out <filename> (-nc -nn -ne -np)
+```
+
+- `url` should follow the format (no check for it currently):
     - EN: `https://www.aalto.fi/en/programmes/<programme>/curriculum-<start-year>-<end-year>`
     - FI: `https://www.aalto.fi/fi/ohjelmat/<programme>/opetussuunnitelma-<start-year>-<end-year>`
-
-(note that there is no check for it currently)
+- filename does not add a file extension automatically
+- nc, nn, ne, np disable course code, name, credits and period respectively
